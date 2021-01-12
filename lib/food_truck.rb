@@ -6,15 +6,13 @@ class FoodTruck
     @name      = name
     @inventory = {}
     @stock     = 0
-    @truck_stock = 0
   end
 
   def stock(item, quantity)
     @inventory[item] = quantity
-    @truck_stock += quantity
   end
 
-  def check_stock(item)
-    @truck_stock
+  def check_stock(quantity)
+    @inventory.values.sum
   end
 end

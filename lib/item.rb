@@ -11,8 +11,4 @@ class Item
   def price
     @price.to_s.gsub(/[$,]/,'').to_f
   end
-
-  def check_stock(item)
-    @inventory.values.sum
-  end
 end
